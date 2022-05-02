@@ -4,7 +4,7 @@ from service_2.app import app, name
 
 class TestBase(TestCase):
     def create_app(self):
-        return app
+        return apps
 
 class TestResponse(TestBase):
 
