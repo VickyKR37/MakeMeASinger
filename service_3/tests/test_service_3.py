@@ -1,6 +1,6 @@
 from flask import url_for
 from flask_testing import TestCase
-from service_3.app import app
+from service_3.app.py import app, surname
 
 class TestBase(TestCase):
     def create_app(self):
@@ -14,4 +14,4 @@ class TestResponse(TestBase):
             response = self.client.get(url_for('get_surname'))
 
             self.assert200(response)
-            self.assertIn(int(response.data.decode()), surname)
+            self.assertIn(response.data.decode(), surname)
