@@ -1,6 +1,6 @@
 from flask import url_for
 from flask_testing import TestCase
-from service_3.app.py import app, surname
+from app import app, surname
 
 class TestBase(TestCase):
     def create_app(self):
