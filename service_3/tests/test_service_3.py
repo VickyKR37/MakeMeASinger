@@ -1,6 +1,6 @@
 from flask import url_for
 from flask_testing import TestCase
-from app import app, name
+from app import app, surname
 
 class TestBase(TestCase):
     def create_app(self):
@@ -8,12 +8,10 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
 
-    def test_get_name(self):
+    def test_get_surname(self):
 
         for i in range(20):
-            response = self.client.get(url_for('get_name'))
+            response = self.client.get(url_for('get_surname'))
 
             self.assert200(response)
-
-            self.assertIn(response.data.decode(), name)
-
+            self.assertIn(response.data.decode(), surname)
