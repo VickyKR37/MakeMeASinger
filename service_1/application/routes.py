@@ -1,5 +1,6 @@
 from flask import render_template, redirect, url_for, request
 import requests, json
+from . import app
 
 @app.route('/', methods=["POST", "GET"])
 def index():
