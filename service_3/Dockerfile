@@ -1,8 +1,8 @@
-FROM python:3.8.10
+FROM python:3.8
 
-WORKDIR /app
+WORKDIR /service_3
 
-COPY . /app/
+COPY . .
 
 RUN pip3 install -r requirements.txt
 
