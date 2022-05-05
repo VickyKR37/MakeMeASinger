@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, Response, request
 
 app = Flask(__name__)
 
-@app.route('/get/genre')
+@app.route('/post/genre', methods=["POST", "GET"])
 def get_genre():
     name = request.get_json()["name"]
     surname = request.get_json()["surname"]
