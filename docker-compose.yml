@@ -29,3 +29,9 @@ services:
   service_3:
     container_name: service_3 
     build: ./service_3
+
+  service_4:
+    container_name: service_4
+    build: ./service_4
+    depends_on:
+    - service_1
