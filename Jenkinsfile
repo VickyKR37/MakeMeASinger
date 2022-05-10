@@ -11,7 +11,6 @@ pipeline {
 
         stage('Build') {
             steps { 
-                sh "ls"
                 sh "docker-compose build --parallel"
             }
         }
