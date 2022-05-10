@@ -11,6 +11,8 @@ pipeline {
 
         stage('Build') {
             steps { 
+                sh "docker-compose --version"
+                sh "sudo su jenkins"
                 sh "sudo docker-compose up --build -d"
             }
         }
