@@ -11,9 +11,7 @@ pipeline {
 
         stage('Build') {
             steps { 
-                sh "docker --version"
-                sh "sudo su jenkins"
-                sh "sudo docker-compose up --build -d"
+                sh "/home/vicky/jenkins/MakeMeASinger/docker-compose.yml up --build -d"
             }
         }
         // stage('Test') {
