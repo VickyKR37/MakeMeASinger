@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps { 
-                sh "docker-compose build --parallel"
+                sh "sudo ln -s docker-compose build --parallel"
             }
         }
         // stage('Test') {
