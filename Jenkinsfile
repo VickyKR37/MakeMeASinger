@@ -10,7 +10,8 @@ pipeline {
 
 
         stage('Build') {
-            steps {
+            steps { 
+                sh "cd MakeMeASinger"
                 sh "docker-compose build --parallel"
             }
         }
