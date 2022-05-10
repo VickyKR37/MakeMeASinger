@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 
-         stage('Clone repository') {
+        stage('Clone repository') {
             steps {
                 checkout scm
             }
@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps { 
-                sh "docker-compose build --parallel"
+                sh "docker-compose up --build -d"
             }
         }
         // stage('Test') {
