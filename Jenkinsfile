@@ -9,21 +9,22 @@ pipeline {
         }
 
 
-        stage('Build') {
-            steps { 
-                sh "ln -s MakeMeASinger/docker-compose.yml build"
-            }
-        }
+        // stage('Build') {
+        //     steps { 
+        //         sh "ln -s MakeMeASinger/docker-compose.yml build"
+        //     }
+        // }
         stage('Test') {
             steps {
                 sh "bash test.sh"
             }
         }    
     
-        // stage('Deploy') {
-        //     steps {
-        //         //
-        //     }
-        // }
+        stage('Deploy') {
+               steps {
+                sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-master:/home/jenkins/docker-compose.yml"
+                sh "scp -i ~/.ssh/ansible_id_rsa nginx.conf swarm-master:/home/jenkins/nginx.conf"
+                sh "ansible-playbook -i configuration/inventory.yaml configuration/playbook.yml"
+            }
+        }
     }
-}
