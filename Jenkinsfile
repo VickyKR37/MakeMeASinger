@@ -14,11 +14,12 @@ pipeline {
                 sh "ln -s MakeMeASinger/docker-compose.yml build"
             }
         }
-        // stage('Test') {
-        //     steps {
-        //         //
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                
+                
+            }
+        }
         // stage('Deploy') {
         //     steps {
         //         //
