@@ -8,4 +8,3 @@ service_2.coverage
 service_3.pytest_cache
 service_3.__pycache__
 service_3.coverage
-
