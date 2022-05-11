@@ -1,2 +1,10 @@
-venv/
-
+venv
+service_1.pytest_cache
+service_1.__pycache__
+service_1.coverage
+service_2.pytest_cache
+service_2.__pycache__
+service_2.coverage
+service_3.pytest_cache
+service_3.__pycache__
+service_3.coverage
