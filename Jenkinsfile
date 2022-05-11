@@ -16,10 +16,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                
-                
+                sh "bash test.sh"
             }
-        }
+        }    
+    
         // stage('Deploy') {
         //     steps {
         //         //
