@@ -9,11 +9,11 @@ pipeline {
         }
 
 
-        // stage('Build') {
-        //     steps { 
-        //         sh "ln -s MakeMeASinger/docker-compose.yml build"
-        //     }
-        // }
+        stage('Build') {
+            steps { 
+                sh "ln -s MakeMeASinger/docker-compose.yml build"
+            }
+        }
         stage('Test') {
             steps {
                 sh "bash test.sh"
