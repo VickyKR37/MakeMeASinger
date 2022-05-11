@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps { 
-                sh "ln -s MakeMeASinger/docker-compose.yml builds"
+                sh "ln -s MakeMeASinger/docker-compose.yml builds --parallel"
             }
         }
         stage('Test') {
